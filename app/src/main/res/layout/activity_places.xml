@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PUBLIC PLACES"
+        android:fontFamily="@font/opensans"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:layout_margin="20dp"/>
+
+        <Button
+            android:id="@+id/Sos"
+            android:layout_width="146dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_margin="20dp"
+            android:background="@color/colorPrimary"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="confirm"
+            android:text="SOS"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:backgroundTint="#FE0000" /></LinearLayout>
+
+        <ImageView
+            android:id="@+id/places_mic"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_mic"
+            />
+
+
+        <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:orientation="horizontal"
+        android:rowCount="4">
+
+<!--        <com.alan.alansdk.button.AlanButton-->
+<!--            android:id="@+id/alan_button"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:visibility="visible"-->
+<!--            app:button_horizontal_align="right"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            />-->
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/school"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_baseline_school_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="130dp"
+                android:fontFamily="@font/opensans"
+                android:text="School"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Offices"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_baseline_business_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="130dp"
+                android:fontFamily="@font/opensans"
+                android:text="Office"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Parks"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_baseline_diversity_2_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="130dp"
+                android:fontFamily="@font/opensans"
+                android:text="Parks"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/theater"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_baseline_theaters_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="130dp"
+                android:fontFamily="@font/opensans"
+                android:text="Theater"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/busstops"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_baseline_directions_bus_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="130dp"
+                android:fontFamily="@font/opensans"
+                android:text="Bus Stops"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/railway"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_baseline_train_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="130dp"
+                android:fontFamily="@font/opensans"
+                android:text="Railway Stations"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/hotels"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_baseline_home_work_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="130dp"
+                android:fontFamily="@font/opensans"
+                android:text="Hotels"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/atm"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_baseline_local_atm_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="130dp"
+                android:fontFamily="@font/opensans"
+                android:text="ATM"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/groceries"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_baseline_local_grocery_store_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="130dp"
+                android:fontFamily="@font/opensans"
+                android:text="Groceries"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/clothing"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/tempsnip" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="130dp"
+                android:fontFamily="@font/opensans"
+                android:text="Clothing"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </GridLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+
+            <TextView
+                android:layout_width="172dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/opensans"
+                android:text="PANEL"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/Sos"
+                android:layout_width="146dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_margin="20dp"
+                android:background="@color/colorPrimary"
+                android:clickable="true"
+                android:onClick="confirm"
+                android:text="SOS"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:backgroundTint="#FE0000"
+                android:focusable="true" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_mic"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_mic"
+          />
+
+        <com.alan.alansdk.button.AlanButton
+            android:id="@+id/alan_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:visibility="visible"
+            app:button_horizontal_align="right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:rowCount="4">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/publicPlaces"
+                android:layout_width="165dp"
+                android:layout_height="165dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/mypins" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="130dp"
+                    android:fontFamily="@font/opensans"
+                    android:text="Public Places"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+              android:id="@+id/emergency"
+                android:layout_width="165dp"
+                android:layout_height="165dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ic_baseline_local_hospital_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="130dp"
+                    android:fontFamily="@font/opensans"
+                    android:text="Emergency"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/restaurants"
+                android:layout_width="165dp"
+                android:layout_height="165dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/restaurants" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="130dp"
+                    android:fontFamily="@font/opensans"
+                    android:text="Restaurant"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ola"
+                android:layout_width="165dp"
+                android:layout_height="165dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ic_baseline_directions_car_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="130dp"
+                    android:fontFamily="@font/opensans"
+                    android:text="OLA"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/uber"
+                android:layout_width="165dp"
+                android:layout_height="165dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ic_baseline_car_rental_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="130dp"
+                    android:fontFamily="@font/opensans"
+                    android:text="UBER"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/volunteer"
+                android:layout_width="165dp"
+                android:layout_height="165dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ic_baseline_help_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="130dp"
+                    android:fontFamily="@font/opensans"
+                    android:text="Restrooms"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardLogout"
+                android:layout_width="165dp"
+                android:layout_height="165dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/lgout" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="130dp"
+                    android:fontFamily="@font/opensans"
+                    android:text="Log Out"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardAboutus"
+                android:layout_width="165dp"
+                android:layout_height="165dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ic_baseline_people_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="130dp"
+                    android:fontFamily="@font/opensans"
+                    android:text="About Us"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+            </androidx.cardview.widget.CardView>
+
+
+
+        </GridLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
